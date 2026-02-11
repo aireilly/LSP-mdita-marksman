@@ -1,0 +1,9 @@
+// Settings for the MDITA Marksman language server.
+// See: https://github.com/aireilly/mdita-marksman
+{
+    // The command to start the language server. Leave empty to auto-detect.
+    // "command": ["/path/to/mdita-marksman", "server"],
+    "selector": "text.html.markdown",
+    "initializationOptions": {},
+    "settings": {},
+}

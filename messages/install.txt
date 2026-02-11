@@ -1,0 +1,58 @@
+  _       _____ _____                    _ _ _
+ | |     / ____|  __ \                  | (_) |
+ | |    | (___ | |__) |_____ _ __ ___   | |_| |_ __ _
+ | |     \___ \|  ___/______| '_ ` _ \  | | | __/ _` |
+ | |____ ____) | |          | | | | | |_| | | || (_| |
+ |______|_____/|_|  _ __ ___|_| |_|_(_)___|_|\__\__,_|
+ |  \/  |           | |
+ |      | __ _ _ __| | _____ _ __ ___   __ _ _ __
+ | |\/| |/ _` | '__| |/ / __| '_ ` _ \ / _` | '_ \
+ | |  | | (_| | |  |   <\__ \ | | | | | (_| | | | |
+ |_|  |_|\__,_|_|  |_|\_\___/_| |_| |_|\__,_|_| |_|
+
+==============================================================
+
+LSP-mdita-marksman is a LSP helper package for the MDITA
+Marksman language server.
+
+LSP-mdita-marksman on its own doesn't do anything. It acts as
+a glue between the LSP package and the MDITA Marksman language
+server. Unlike npm-based LSP helpers, this package expects the
+mdita-marksman binary to be pre-installed on your system.
+
+Prerequisites
+-------------
+
+1. Install the LSP package from Package Control.
+2. Build and install mdita-marksman:
+
+   git clone https://github.com/aireilly/mdita-marksman
+   cd mdita-marksman
+   make install
+
+   The binary is installed to ~/.local/bin/mdita-marksman.
+   Ensure ~/.local/bin is on your PATH.
+
+Features
+--------
+
+Everything that the MDITA Marksman language server supports:
+
+- Document and workspace symbols from headings.
+- Completion for inline links, reference links, and wiki links.
+- MDITA YAML front matter completion.
+- Hover preview for links.
+- Go to definition and find references.
+- Diagnostics for broken links, MDITA compliance, and more.
+- Code Lens with reference counts on headings.
+- Rename refactoring.
+- Code action to generate a Table of Contents.
+- MDITA map file (.mditamap) support.
+
+Having Problems?
+----------------
+
+If you encounter any problems with LSP-mdita-marksman, please
+log an issue on the issue tracker:
+
+    https://github.com/aireilly/LSP-mdita-marksman/issues
