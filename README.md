@@ -77,6 +77,40 @@ To enable MDITA-specific diagnostics (missing YAML front matter, short descripti
 enable = true
 ```
 
+## Keyboard Shortcuts
+
+All keybindings are scoped to Markdown files (`text.html.markdown`) and require the corresponding LSP server capability.
+
+| Shortcut | Command | Description |
+|---|---|---|
+| <kbd>F12</kbd> | Go to Definition | Jump to the definition of a heading or link target |
+| <kbd>Shift+F12</kbd> | Find References | Find all references to a heading or link |
+| <kbd>F2</kbd> | Rename Symbol | Rename a heading or link across files |
+| <kbd>Ctrl+Shift+O</kbd> | Document Symbols | Navigate headings in the current file |
+| <kbd>Ctrl+Shift+R</kbd> | Workspace Symbols | Search symbols across all project files |
+| <kbd>Ctrl+Shift+A</kbd> | Code Actions | Trigger code actions (e.g. Generate Table of Contents) |
+| <kbd>Ctrl+Shift+H</kbd> | Hover | Show hover information for links and headings |
+| <kbd>Ctrl+Space</kbd> | Auto Complete | Trigger completions for links, front matter fields |
+
+## Snippets
+
+Tab-trigger snippets are available in Markdown files for common MDITA constructs:
+
+| Tab Trigger | Description | Output |
+|---|---|---|
+| `mdita-topic` | Full MDITA topic template | YAML front matter + heading + body |
+| `frontmatter` | YAML front matter block | `---` block with `id`, `shortdesc`, `author` |
+| `xref` | Cross-reference link | `[link text](filename.md)` |
+| `fragref` | DITA fragment ID link | `[link text](filename.md#topicID/sectionID)` |
+| `mapentry` | MDITA map entry | `- [Topic Title](path/to/topic.md)` |
+| `wiki` | Wiki-style link | `[[target-topic]]` |
+
+## Completions
+
+YAML front matter field completions are provided when editing Markdown files. Type the field name and press <kbd>Tab</kbd> to expand:
+
+`id`, `shortdesc`, `author`, `source`, `publisher`, `permissions`, `audience`, `category`, `keyword`, `resourceid`
+
 ## Reporting issues
 
 If you encounter problems, first check whether the same issue occurs with `mdita-marksman` directly. If it does, file an issue with the [language server](https://github.com/aireilly/mdita-marksman/issues). For issues specific to the Sublime Text integration, file them at:

@@ -1,0 +1,15 @@
+<snippet>
+    <content><![CDATA[---
+id: ${1:topic-id}
+shortdesc: ${2:Short description of the topic}
+author: ${3:Author Name}
+---
+
+# ${4:Topic Title}
+
+${5:Topic content goes here.}
+]]></content>
+    <tabTrigger>mdita-topic</tabTrigger>
+    <scope>text.html.markdown</scope>
+    <description>MDITA Topic Template</description>
+</snippet>

@@ -1,0 +1,11 @@
+<snippet>
+    <content><![CDATA[---
+id: ${1:topic-id}
+shortdesc: ${2:Short description}
+author: ${3:Author Name}
+---
+]]></content>
+    <tabTrigger>frontmatter</tabTrigger>
+    <scope>text.html.markdown</scope>
+    <description>YAML Front Matter Block</description>
+</snippet>
