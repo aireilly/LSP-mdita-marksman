@@ -1,1 +1,3 @@
-*.png export-ignore
+pyrightconfig.json export-ignore
+pyproject.toml export-ignore
+tox.ini export-ignore
