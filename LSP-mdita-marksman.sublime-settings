@@ -1,5 +1,7 @@
 {
     "command": ["mdita-marksman", "server"],
+    // If mdita-marksman is not on PATH, specify the full path:
+    // "command": ["/path/to/mdita-marksman", "server"],
     "selector": "text.html.markdown",
     "initializationOptions": {
         // How text is synced between this client and the server.
