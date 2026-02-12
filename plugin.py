@@ -42,8 +42,7 @@ class MditaMarksman(AbstractPlugin):
         if directory and not os.path.exists(directory):
             os.makedirs(directory)
         if not os.path.exists(path):
-            with open(path, 'w') as f:
-                pass
+            open(path, 'w').close()
         window = sublime.active_window()
         if window:
             window.open_file(path)
