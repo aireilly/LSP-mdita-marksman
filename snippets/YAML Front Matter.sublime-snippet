@@ -1,8 +1,7 @@
 <snippet>
     <content><![CDATA[---
 id: ${1:topic-id}
-shortdesc: ${2:Short description}
-author: ${3:Author Name}
+author: ${2:Author Name}
 ---
 ]]></content>
     <tabTrigger>frontmatter</tabTrigger>

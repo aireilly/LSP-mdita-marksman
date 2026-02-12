@@ -10,5 +10,8 @@
     },
     "experimental_capabilities": {
         "codeLensFindReferences": true,
-    }
+    },
+    "auto_complete_selector": "text.html.markdown",
+    "inhibit_word_completions": false,
+    "disabled_capabilities": {}
 }

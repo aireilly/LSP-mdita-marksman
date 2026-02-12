@@ -21,13 +21,13 @@ class MditaMarksman(AbstractPlugin):
 
     def on_pre_server_command(self, command: Mapping[str, Any], done_callback: Callable[[], None]) -> bool:
         command_name = command['command']
-        if command_name == 'marksman.findReferences':
+        if command_name == 'mdita-marksman.findReferences':
             command_arguments = command['arguments']
             if command_arguments and 'locations' in command_arguments[0]:
                 self._handle_show_references(command_arguments[0]['locations'])
             done_callback()
             return True
-        if command_name == 'marksman.createFile':
+        if command_name == 'mdita-marksman.createFile':
             command_arguments = command.get('arguments')
             if command_arguments and len(command_arguments) > 0:
                 self._handle_create_file(str(command_arguments[0]))

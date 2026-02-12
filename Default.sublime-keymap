@@ -1,5 +1,5 @@
 [
-    // Find References (uses the custom marksman.findReferences handler)
+    // Find References (uses the custom mdita-marksman.findReferences handler)
     {
         "keys": ["shift+f12"],
         "command": "lsp_symbol_references",
