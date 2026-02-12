@@ -2,7 +2,9 @@ from LSP.plugin import AbstractPlugin, register_plugin, unregister_plugin
 from LSP.plugin.core.protocol import Location
 from LSP.plugin.core.typing import Any, Callable, List, Mapping
 from LSP.plugin.locationpicker import LocationPicker
+import os
 import sublime
+from urllib.parse import unquote, urlparse
 
 
 SESSION_NAME = "mdita-marksman"
@@ -25,7 +27,26 @@ class MditaMarksman(AbstractPlugin):
                 self._handle_show_references(command_arguments[0]['locations'])
             done_callback()
             return True
+        if command_name == 'marksman.createFile':
+            command_arguments = command.get('arguments')
+            if command_arguments and len(command_arguments) > 0:
+                self._handle_create_file(str(command_arguments[0]))
+            done_callback()
+            return True
         return False
+
+    def _handle_create_file(self, uri: str) -> None:
+        parsed = urlparse(uri)
+        path = unquote(parsed.path)
+        directory = os.path.dirname(path)
+        if directory and not os.path.exists(directory):
+            os.makedirs(directory)
+        if not os.path.exists(path):
+            with open(path, 'w') as f:
+                pass
+        window = sublime.active_window()
+        if window:
+            window.open_file(path)
 
     def _handle_show_references(self, references: List[Location]) -> None:
         session = self.weaksession()
