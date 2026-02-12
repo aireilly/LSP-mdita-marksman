@@ -1,11 +1,12 @@
 <snippet>
     <content><![CDATA[---
 id: ${1:topic-id}
-shortdesc: ${2:Short description of the topic}
-author: ${3:Author Name}
+author: ${2:Author Name}
 ---
 
-# ${4:Topic Title}
+# ${3:Topic Title}
+
+${4:Short description of the topic}
 
 ${5:Topic content goes here.}
 ]]></content>

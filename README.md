@@ -91,6 +91,8 @@ All keybindings are scoped to Markdown files (`text.html.markdown`) and require 
 | <kbd>Ctrl+Shift+A</kbd> | Code Actions | Trigger code actions (e.g. Generate Table of Contents) |
 | <kbd>Ctrl+Shift+H</kbd> | Hover | Show hover information for links and headings |
 | <kbd>Ctrl+Space</kbd> | Auto Complete | Trigger completions for links, front matter fields |
+| <kbd>Ctrl+Click</kbd> | Go to Definition | Click a file reference or link to jump to it |
+| <kbd>Ctrl+Shift+Click</kbd> | Go to Definition (side-by-side) | Open the target in a split view |
 
 ## Snippets
 
