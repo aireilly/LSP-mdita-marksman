@@ -6,6 +6,8 @@
 
 Unlike npm-based LSP helpers, this package expects the `mdita-marksman` binary to be pre-installed on your system.
 
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/80a3e39a-8383-484c-ba72-3d76c81a785f" />
+
 ## Features
 
 Everything that the [MDITA Marksman](https://github.com/aireilly/mdita-marksman) language server supports, which includes:
